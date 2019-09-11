@@ -2,8 +2,7 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet"
-        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
         integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
     <title>Search</title>
@@ -35,8 +34,8 @@
                         <input type="text" class="form-control" id="search" required="">
                     </div>
                     <center>
-                        <button id="btnSearch" class="btn btn-raised btn-info" >Search</button>
-                        <p>No result found..,</p>
+                        <button id="btnSearch" class="btn btn-raised btn-info">Search</button>
+                        <!-- <p>Result: </p> -->
                     </center>
 
                     <!-- <label class="bmd-label-static">Status</label>
@@ -52,7 +51,7 @@
     <div class="row class-list">
         <div class="container ">
             <table class="table table-bordered ">
-                <thead class="bg-info">
+                <thead class="bg-info bmd-label-static">
                     <tr class=" text-center">
                         <th scope="col">
                             <h6>Country</h6>
@@ -68,30 +67,24 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody class="text-center">
-                </tbody>
+                <tbody class="text-center"></tbody>
             </table>
-
         </div>
     </div>
     </div>
     <script>
 
-            //emptyTableFunction
-            function emptyTable() {
-                $('tbody').empty();
-            }
-            //addRow
-            function addRow(name,flag,alpha3Code,population) {
-                $('tbody').append(
-                        "<tr><td>" + name + "</td><td><img style='height:20px' src=" + flag + "></td><td>" + alpha3Code + "</td><td>" + population + "</td></tr>"
-                    )
-            }
+        //emptyTableFunction
+        function emptyTable() {
+            $('tbody').empty();
+        }
+        //addRow
+        function addRow(name, flag, alpha3Code, population) {
+            $('tbody').append(
+                "<tr><td>" + name + "</td><td><img style='height:20px' src=" + flag + "></td><td>" + alpha3Code + "</td><td>" + population + "</td></tr>"
+            )
+        }
 
-
-
-
-   
     </script>
     <script src="controller.js"></script>
 </body>
